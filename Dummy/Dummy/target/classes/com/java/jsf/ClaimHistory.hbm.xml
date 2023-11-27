@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 13-Nov-2023, 9:26:12 am by Hibernate Tools 3.6.2.Final -->
+<hibernate-mapping>
+
+<class
+    name="com.java.jsf.ClaimHistory"
+    table="CLAIM_HISTORY"
+>
+
+	<id 
+        name="claimHistoryId"
+        type="int"
+    >
+    
+<column name="CLAIMHISTORYID" />
+	    <generator class="assigned" />
+    </id>
+
+
+
+
+    <property
+        name="claimId"
+	    type="int"
+    >
+<column name="CLAIM_ID" />
+  </property>
+
+    <property
+        name="providerId"
+	    type="java.lang.String"
+    >
+<column name="PROVIDERID" />
+  </property>
+
+    <property
+        name="planId"
+	    type="int"
+    >
+<column name="PLAN_ID" />
+  </property>
+
+    <property
+        name="uhid"
+	    type="java.lang.String"
+    >
+<column name="UHID" />
+  </property>
+
+    <property
+        name="fromDate"
+	    type="java.util.Date"
+    >
+<column name="FROMDATE" />
+  </property>
+
+    <property
+        name="toDate"
+	    type="java.util.Date"
+    >
+<column name="TODATE" />
+  </property>
+
+    <property
+        name="claimAmount"
+	    type="double"
+    >
+<column name="CLAIMAMOUNT" />
+  </property>
+
+    <property
+        name="status"
+	    type="java.lang.String"
+    >
+<column name="STATUS" />
+  </property>
+
+    <property
+        name="comments"
+	    type="java.lang.String"
+    >
+<column name="COMMENTS" />
+  </property>
+
+
+</class>
+
+</hibernate-mapping>
