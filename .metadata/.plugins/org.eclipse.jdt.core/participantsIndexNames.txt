@@ -1,0 +1,3 @@
+INDEX VERSION 1.132
+D:\Dummy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\212890692.index
+\Dummy\src\main\java

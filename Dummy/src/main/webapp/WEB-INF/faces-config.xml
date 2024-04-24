@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee /WEB-INF/schema/web-facesconfig_2_0.xsd"
+	version="2.0" metadata-complete="false">
+	<!-- This file must be present with our jar, even if it is empty. Otherwise, 
+		our Java annotations won't get scanned! -->
+
+	<managed-bean>
+		<managed-bean-name>insurancePlans</managed-bean-name>
+		<managed-bean-class>com.java.jsf.InsurancePlans</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>login</managed-bean-name>
+		<managed-bean-class>com.java.jsf.Login</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>loginImpl</managed-bean-name>
+		<managed-bean-class>com.java.jsf.LoginImpl</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>patientLogin</managed-bean-name>
+		<managed-bean-class>com.java.jsf.Patient</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>provider</managed-bean-name>
+		<managed-bean-class>com.java.jsf.Patient</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	
+	
+	<managed-bean>
+		<managed-bean-name>sub</managed-bean-name>
+		<managed-bean-class>com.java.jsf.Subscription</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>impl</managed-bean-name>
+		<managed-bean-class>com.java.jsf.Impl</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>paginationDao</managed-bean-name>
+		<managed-bean-class>com.java.jsf.JsfPaginationBean
+		</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	
+	
+	<managed-bean>
+		<managed-bean-name>searchController</managed-bean-name>
+		<managed-bean-class>com.java.jsf.SearchController</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>impl</property-name>
+			<property-class>com.java.jsf.Impl</property-class>
+			<value>#{impl}</value>
+		</managed-property>
+
+		<managed-property>
+			<property-name>paginationDao</property-name>
+			<property-class>com.java.jsf.JsfPaginationBean</property-class>
+			<value>#{paginationDao}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>sub</property-name>
+			<property-class>com.java.jsf.Subscription</property-class>
+			<value>#{sub}</value>
+		</managed-property> 
+	</managed-bean>
+</faces-config>

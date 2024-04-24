@@ -1,0 +1,71 @@
+<%@page contentType="text/html"%>
+<%@page pageEncoding="UTF-8"%>
+
+<%@taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
+<%@taglib prefix="h" uri="http://java.sun.com/jsf/html"%>
+
+<f:view>
+	<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>JSP Page</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<h:form>
+			<center>
+			<br>
+				<h2>
+					<h:outputText value="Recipient Information" />
+				</h2>
+
+				<h:dataTable value="#{impl.showRecipient()}" var="i" border="3">
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="UHID" />
+						</f:facet>
+						<h:outputText value="#{i.uhid}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="Insurance No" />
+						</f:facet>
+						<h:outputText value="#{i.insId}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="Plan No" />
+						</f:facet>
+						<h:outputText value="#{i.planId}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="First Name" />
+						</f:facet>
+						<h:outputText value="#{i.firstName}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputLabel value="Last Name" />
+						</f:facet>
+						<h:outputText value="#{i.lastName}" />
+					</h:column>
+					
+					<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="View Insurance" />
+				</f:facet>
+				<h:commandButton action="#{impl.redirectToShowSubscription(i.uhid)}" value="View" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputLabel value="View Claim History" />
+				</f:facet>
+				<h:commandButton action="#{impl.redirectToShowClaimHistory(i.uhid)}" value="View" />
+			</h:column>
+					</h:dataTable>
+			</center>
+		</h:form>
+	</body>
+	</html>
+</f:view>

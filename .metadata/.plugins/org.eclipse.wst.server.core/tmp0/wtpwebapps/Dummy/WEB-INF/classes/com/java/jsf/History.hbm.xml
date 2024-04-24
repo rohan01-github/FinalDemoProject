@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 12-Nov-2023, 3:21:14 pm by Hibernate Tools 3.6.2.Final -->
+<hibernate-mapping>
+
+<class
+    name="com.java.jsf.History"
+    table="RECIPIENT_HISTORY"
+>
+
+	<id 
+        name="uhid"
+        type="java.lang.String"
+    >
+    
+<column name="UHID" />
+	    <generator class="assigned" />
+    </id>
+
+
+
+
+    <property
+        name="sno"
+	    type="int"
+    >
+<column name="SNO" />
+  </property>
+
+    <property
+        name="claimId"
+	    type="int"
+    >
+<column name="CLAIM_ID" />
+  </property>
+
+    <property
+        name="premium"
+	    type="int"
+    >
+<column name="PREMIUM" />
+  </property>
+
+    <property
+        name="covAmount"
+	    type="int"
+    >
+<column name="COVERAGEAMOUNT" />
+  </property>
+
+    <property
+        name="claimedDate"
+	    type="java.util.Date"
+    >
+<column name="CLAIMEDDATE" />
+  </property>
+
+    <property
+        name="benefitPayout"
+	    type="double"
+    >
+<column name="BENEFITPAYOUT" />
+  </property>
+
+    <property
+        name="benefitRemaining"
+	    type="double"
+    >
+<column name="BENEFITREMAINING" />
+  </property>
+
+    <property
+        name="incentive"
+	    type="java.lang.String"
+    >
+<column name="INCENTIVE" />
+  </property>
+
+    <property
+        name="status"
+	    type="java.lang.String"
+    >
+<column name="STATUS" />
+  </property>
+
+
+</class>
+
+</hibernate-mapping>
